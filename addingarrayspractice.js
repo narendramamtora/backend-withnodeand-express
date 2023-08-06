@@ -56,18 +56,39 @@
 // async code (which take time to exicute )
 //the the code below we set the timer but as the log and callback are used in that why which log timer done first the done
 // it is possible settimeout content the callback of fetch
+// const fetch= cb=>{
+//     setTimeout(()=>{
+//         cb('done!')
+//     },1500);
+// };
+
+
+// setTimeout(()=>{
+//     console.log('timer done');
+//     fetch(text=>{
+//         console.log(text);
+//     },);
+// },2000)
+
+
+//? promise
+
 const fetch= cb=>{
-    setTimeout(()=>{
-        cb('done!')
-    },1500);
+    const promise =new Promise((res,rej)=>{
+      setTimeout(()=>{
+        res('done!')
+        },1500);
+    })
+    return promise
 };
-
-
 setTimeout(()=>{
     console.log('timer done');
-    fetch(text=>{
+    fetch()
+   .then(text=>{
         console.log(text);
-    },);
+        return fetch()
+    })
+    .then(text2=>{
+        console.log(text2);
+    });
 },2000)
-
-
