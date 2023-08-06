@@ -1,24 +1,24 @@
-const person={
-    name: "max",
-    age:29,
-    get(){
-        console.log('Hi this is '+this.name);
-    }
-};
-//? in destructuring we have to specify the property we are intersted in here we are going with name property
-const printsname=({name,age})=>{  
-    console.log(name,age);
-}
-printsname(person);
+// const person={
+//     name: "max",
+//     age:29,
+//     get(){
+//         console.log('Hi this is '+this.name);
+//     }
+// };
+// //? in destructuring we have to specify the property we are intersted in here we are going with name property
+// const printsname=({name,age})=>{  
+//     console.log(name,age);
+// }
+// printsname(person);
 
-// we can also use it outside the object 
-const {name,age}=person; // we have to write the same property name as there in the objects
-console.log(name,age);
+// // we can also use it outside the object 
+// const {name,age}=person; // we have to write the same property name as there in the objects
+// console.log(name,age);
 
-// destructuring arrays 
-const hobbies=['storts', 'cooking',2]
-const [h1,h2,h3]=hobbies;  //unlike object we can use any same name in this variable as we use h1,h2,h3
-console.log(h1,h2,h3);
+// // destructuring arrays 
+// const hobbies=['storts', 'cooking',2]
+// const [h1,h2,h3]=hobbies;  //unlike object we can use any same name in this variable as we use h1,h2,h3
+// console.log(h1,h2,h3);
 
 // for(let hoy of hobbies){
 //     console.log(hoy);
@@ -53,5 +53,21 @@ console.log(h1,h2,h3);
 // };
 // console.log(arrayc(1,2,3,4,5))
 
+// async code (which take time to exicute )
+//the the code below we set the timer but as the log and callback are used in that why which log timer done first the done
+// it is possible settimeout content the callback of fetch
+const fetch= cb=>{
+    setTimeout(()=>{
+        cb('done!')
+    },1500);
+};
+
+
+setTimeout(()=>{
+    console.log('timer done');
+    fetch(text=>{
+        console.log(text);
+    },);
+},2000)
 
 
