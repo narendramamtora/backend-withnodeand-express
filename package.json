@@ -1,0 +1,20 @@
+{
+  "name": "backend-withnodeand-express",
+  "version": "1.0.0",
+  "description": "complete course of node js",
+  "main": "chatapp.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon chatapp.js",
+    "start-server": "chatapp.js"
+  },
+  "author": "Narendra Mamtora",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  },
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "express": "^4.18.2"
+  }
+}
