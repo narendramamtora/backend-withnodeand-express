@@ -9,6 +9,10 @@ const router = express.Router();
 router.get('/', shopController.getIndex);
 
 router.get('/products', shopController.getProducts);
+//simple sql
+router.get('/cart/1', shopController.getProducts);
+router.get('/products', shopController.getProductUsers);
+
 
 router.get('/products/:productId', shopController.getProduct);
 
