@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Attendance Management</title>
+</head>
+<body>
+
+    <div>
+        <label for="datePicker">Select a Date:</label>
+        <input type="date" id="datePicker">
+        <button id="searchButton">Search</button>
+        <button id="fetchAttendance">Fetch Attendance Report</button>
+    </div>
+
+    <div id="attendanceForm" style="display: none;">
+    </div>
+    
+    <div id="attendanceResult" style="display: none;">
+    </div>
+    <div>
+        <button id="makeattendance">Make Attendance</button>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.3.4/axios.min.js"></script>
+    <script src="frontend.js"></script>
+</body>
+</html>
