@@ -1,0 +1,28 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Media App</title>
+</head>
+<body>
+<h1>Create A Post</h1>
+    <div>
+        <label for="post">Post Link:</label>
+        <input type="link" id="post" placeholder="paste your link" name="post">
+    </div>
+    <div>
+        <label for="postdes">Post Description:</label>
+        <input type="text" id="postdes" placeholder="Description" name="postdes">
+    </div>
+        <button id="createpost">Create Post</button>
+        <h1>Posts</h1>
+    <div id="postList"></div>     
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.3.4/axios.min.js"></script>
+    <script src="frontend.js"></script>
+</body>
+</html>
